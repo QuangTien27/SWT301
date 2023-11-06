@@ -1,16 +1,15 @@
-package test;
+package element;
 
 import driver.driverFactory;
 import element.ElementController;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
 
 import java.awt.*;
-@Test
+
 public class DnDHandle {
-    public static void testDnDHandle () {
+    public static void main(String[] args) {
         WebDriver driver = driverFactory.getChromeDriver();
         driver.get("http://the-internet.herokuapp.com/drag_and_drop");
 

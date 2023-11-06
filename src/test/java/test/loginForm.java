@@ -4,6 +4,7 @@ import driver.driverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -21,7 +22,7 @@ public class loginForm {
             //3. Find username web element
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
             WebElement usernameElem = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("#username"))));
-            //WebElement usernameElem = driver.findElement(By.xpath("//input[@id='username']"));
+            //WebElement usernameElem = driver.findElement(By.cssSelector("#username"));
             //4. Find password web element
             WebElement passwordElem = driver.findElement(By.cssSelector("#password"));
             //5. Find login btn web element
@@ -30,8 +31,6 @@ public class loginForm {
             usernameElem.sendKeys("admin");
             passwordElem.sendKeys("12345678");
             loginBtnElem.click();
-            //7. Quit browser session
-            driver.quit();
         }catch (Exception e){
             e.printStackTrace();
         }

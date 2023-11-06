@@ -17,7 +17,6 @@ public class UrlPageTitleHandle {
         WebDriver driver = driverFactory.getChromeDriver();
         try {
             driver.get("https://the-internet.herokuapp.com/login");
-
             String pageURL = driver.getCurrentUrl();
             String pageTitle = driver.getTitle();
 

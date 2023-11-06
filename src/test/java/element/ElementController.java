@@ -2,7 +2,6 @@ package element;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Point;
-import org.testng.annotations.Test;
 
 import java.awt.*;
 import java.awt.event.InputEvent;
