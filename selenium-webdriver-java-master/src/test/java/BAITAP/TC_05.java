@@ -41,10 +41,10 @@ public class TC_05 {
     @Test
     public static void testTC05() {
         int scc=0;
-        String firstName = "nhan";
-        String lastName = "tran";
-        String email_address = "nhantran12@gmail.com";
-        String password = "nhan1234";
+        String firstName = "tien";
+        String lastName = "nguyen";
+        String email_address = "tiennguyen123@gmail.com";
+        String password = "123456";
         String confirmPassword = password;
         WebDriver driver = driverFactory.getChromeDriver();
         RegisterPage registerPage = new RegisterPage(driver);
@@ -95,7 +95,7 @@ public class TC_05 {
             scc = (scc+1);
             TakesScreenshot screenshot =((TakesScreenshot)driver);
             File srcFile= screenshot.getScreenshotAs(OutputType.FILE);
-            String png =("D:\\IdeaProjects\\selenium-webdriver-java-master-nhantdse161743\\src\\test\\resources\\png/TC05_" + scc +".png");
+            String png =("C:\\Users\\Admin\\Documents\\GitHub\\SWT301\\selenium-webdriver-java-master\\src\\test\\resources\\png\\TC5_" + scc +".png");
             FileHandler.copy(srcFile, new File(png));
         }catch(Exception e){
             e.printStackTrace();

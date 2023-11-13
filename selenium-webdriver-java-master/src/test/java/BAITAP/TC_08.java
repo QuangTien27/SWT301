@@ -34,8 +34,8 @@ import java.io.File;
 public class TC_08 {
     @Test
     public void testTC08(){
-        String email = "nhantran@gmail.com";
-        String password = "nhan1234";
+        String email = "tiennguyen123@gmail.com";
+        String password = "123456";
         String country = "United States";
         String region = "Alabama";
         String zip = "100000";
@@ -119,7 +119,7 @@ public class TC_08 {
             scc = (scc+1);
             TakesScreenshot screenshot =((TakesScreenshot)driver);
             File srcFile= screenshot.getScreenshotAs(OutputType.FILE);
-            String png =("D:\\IdeaProjects\\selenium-webdriver-java-master-nhantdse161743\\src\\test\\resources\\png/TC08_" + scc +".png");
+            String png =("C:\\Users\\Admin\\Documents\\GitHub\\SWT301\\selenium-webdriver-java-master\\src\\test\\resources\\png\\TC08_" + scc +".png");
             FileHandler.copy(srcFile, new File(png));
         } catch (Exception e) {
             e.printStackTrace();
